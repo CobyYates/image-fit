@@ -1,32 +1,53 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view />
-  </div>
+  <v-app>
+    <v-app-bar
+      id="nav"
+      flat
+      height="100"
+      dense
+      absolute
+      color="rgba(49, 49, 49, 0.19)"
+    >
+      <v-row class="py-2 px-6">
+        <v-col
+          cols="12"
+          class="d-flex align-center justify-center"
+        >
+          <router-link to="/" class="mr-6 title font-weight-light">
+            HOME
+          </router-link>
+          <router-link to="/about" class="mr-6 title font-weight-light">
+            ABOUT
+          </router-link>
+          <router-link to="/plat" class="mr-6 title font-weight-light">
+            LOTS
+          </router-link>
+          <router-link
+            to="/login"
+            class="title font-weight-light"
+          >
+            LOGIN
+          </router-link>
+        </v-col>
+      </v-row>
+    </v-app-bar>
+
+    <v-main>
+      <router-view class="pt-3" />
+    </v-main>
+  </v-app>
 </template>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
+<script>
 
-#nav {
-  padding: 30px;
-}
+export default {
+  name: "App",
+};
+</script>
 
+<style lang="scss">
 #nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-#nav a.router-link-exact-active {
-  color: #42b983;
+  text-decoration: none;
+  color: white !important;
 }
 </style>

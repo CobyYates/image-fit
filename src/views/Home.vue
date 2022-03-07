@@ -1,18 +1,26 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
+  <div class="secondary">
+    <v-row class="home">
+      <v-col class="pt-0 pb-0">
+        <img
+          src="https://images.pexels.com/photos/675764/pexels-photo-675764.jpeg"
+        />
+      </v-col>
+    </v-row>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import HelloWorld from "@/components/HelloWorld.vue";
 
 export default {
   name: "Home",
-  components: {
-    HelloWorld,
-  },
 };
 </script>
+
+<style scoped>
+::v-deep img {
+  height: 100vh!important;
+  width: 100vw;
+}
+</style>
